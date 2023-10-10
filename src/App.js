@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+
+const StyledButton = styled.button`
+  background-color: aqua;
+  &:hover {
+    background-color: beige;
+  }
+`;
+
+const buttonCss = css`
+  background-color: aqua;
+  &:hover {
+    background-color: beige;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <StyledButton>Styled</StyledButton>
+      <button css={buttonCss}>CSS</button>
+    </section>
   );
 }
 
