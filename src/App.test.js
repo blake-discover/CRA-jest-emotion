@@ -10,7 +10,6 @@ describe("App", () => {
       render(<App />);
       const button = screen.queryByText(query);
       expect(button).toBeInTheDocument();
-
       expect(button).toHaveStyle({ "background-color": "aqua" });
     }
   );
